@@ -4,7 +4,7 @@ func_basic_cal <- function(num_1, num2){
     sum = num_1 + num_2
     sub = num_1 - num_2
     mul = num_1 * num_2
-    div = num_1/num_1
+    div = num_1/num_2
     result <- c(sum, sub, mul, div)
     return(result)
 }
