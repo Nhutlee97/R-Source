@@ -50,7 +50,7 @@ func_check_odd_even <- function(n){
     }else{
         str_out <- cat(n, "is odd number")
     }    
-    return str_out
+    return(str_out)
 }
 
 
