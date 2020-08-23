@@ -1,6 +1,6 @@
 # Chap 1
 # Calculate sum, sub, mul, div of 2 number
-func_basic_cal <- function(num_1, num2){
+func_basic_cal <- function(num_1, num_2){
     sum = num_1 + num_2
     sub = num_1 - num_2
     mul = num_1 * num_2
