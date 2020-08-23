@@ -43,6 +43,17 @@ func_cal_R_P_circle <- function(S){
     return(result)
 }
 
+# Ex 3.1: Check number odd or even
+func_check_odd_even <- function(n){
+    if(n%%2 == 0){
+        str_out <- cat(n, "is even number")
+    }else{
+        str_out <- cat(n, "is odd number")
+    }    
+    return str_out
+}
+
+
 
 
 
