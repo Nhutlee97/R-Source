@@ -34,6 +34,14 @@ func_interest_cal_saving <- function(lai_suat_nam, tien_gui, so_ngay_gui){
     result <- c(lai_suat_nam, tien_gui, so_ngay_gui, lai_suat_ngay, tien_lai, tong_tien)
 }
 
+# Ex 2.4: Function calculate radius and perimeter of circle
+func_cal_R_P_circle <- function(as.integer(S)){
+    PI <- 3.14
+    R <- sqrt(S/PI)
+    P <- 2*PI*sqrt(S/PI)
+    result <- c(R, P, S)
+    return(result)
+}
 
 
 
