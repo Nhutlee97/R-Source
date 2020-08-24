@@ -46,15 +46,70 @@ func_cal_R_P_circle <- function(S){
 # Ex 3.1: Check number odd or even
 func_check_odd_even <- function(n){
     if(n%%2 == 0){
-        str_out <- cat(n, "is even number")
+        str_out <- paste(n, "is even number")
     }else{
-        str_out <- cat(n, "is odd number")
+        str_out <- paste(n, "is odd number")
     }    
     return(str_out)
 }
 
+# Ex 3.2: electricity bill for living
+tinh_tien_dien_ver2020 <- function(so_Kwh){
+    muc_1 <- 1678
+    muc_2 <- 1734
+    muc_3 <- 2014
+    muc_4 <- 2536
+    muc_5 <- 2834
+    muc_6 <- 2927
+    
+    bac_50 <- 50
+    bac_100 <- 100
+    tien_dien <- 0
+    if(so_Kwh <= 50){
+        tien_dien <- so_Kwh*muc_1
+        return(tien_dien)
+    }else if(so_Kwh <= 100){
+        tien_dien <- bac_50*muc_1 + (so_Kwh-bac_50)*muc_2
+        return(tien_dien)
+    }else if(so_Kwh <= 200){
+        tien_dien <- bac_50*(muc_1 + muc_2) + (so_Kwh-bac_100)*muc_3
+        return(tien_dien)
+    }else if(so_Kwh <= 300){
+        tien_dien <- bac_50*(muc_1 + muc_2) + bac_100*muc_3 + (so_Kwh - bac_50 - bac_50 -bac_100)*muc_4
+        return(tien_dien)
+    }else if(so_Kwh <= 400){
+        tien_dien <- bac_50*(muc_1 + muc_2) + bac_100*(muc_3 + muc_4) + (so_Kwh - bac_50 - bac_50 - bac_100 - bac_100)*muc_5
+        return(tien_dien)
+    }else{
+        tien_dien <- bac_50*(muc_1 + muc_2) + bac_100*(muc_3 + muc_4 + muc_5) + (so_Kwh - bac_50 - bac_50 - bac_100 - bac_100 - bac_100)*muc_6
+        return(tien_dien)
+    }
+}
 
-
+# Ex 3.4: Calculate hotel bill
+# func_cal_room_bill <- function(room_type, date_stay){
+#     vip_1 <- 1000000
+#     vip_2 <- 900000
+#     vip_3 <- 850000
+#     standard_1 <- 700000
+#     standard_2 <- 550000
+    
+#     don_gia_phong <- switch(room_type, 
+#                            vip_1, 
+#                            vip_2, 
+#                            vip_3, 
+#                            standard_1,
+#                            standard_2)
+#     tien <- 0
+#     if(date_stay <3){
+#         tien <- don_gia_phong*date_stay
+#     }else if(date_stay <7){
+#         tien <- don_gia_phong*date_stay*0.9
+#     }else{
+#         tien <- don_gia_phong*date_stay*0.8
+#     }
+#     return(tien)
+# }
 
 
 
